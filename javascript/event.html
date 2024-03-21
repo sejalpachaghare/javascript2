@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Handlers Example</title>
+  <style>
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button id="myButton">Click me!</button>
+
+<script>
+  // Event handler function for click event
+  function handleClick() {
+    alert('Button Clicked!');
+  }
+
+  // Event handler function for mouseover event
+  function handleMouseOver() {
+    console.log('Mouse Over Button!');
+  }
+
+  // Event handler function for keydown event
+  function handleKeyDown(event) {
+    console.log('Key Pressed:', event.key);
+  }
+
+  // Get the button element
+  var button = document.getElementById('myButton');
+
+  // Attach event handlers
+  button.addEventListener('click', handleClick);
+  button.addEventListener('mouseover', handleMouseOver);
+  document.addEventListener('keydown', handleKeyDown);
+</script>
+
+</body>
+</html>
